@@ -1,15 +1,27 @@
  import React from 'react';
  import {connect} from 'react-redux';
- import {} from '../actions';
+ import { getData } from '../actions';
 
 
  const JokeForm = state => {
     return(
         <div>
-            <h3>Insert joke form api here</h3>
-            <button>Get Random Joke</button>
-        </div>
+           
+           <h3 className='actualJoke'>{state.joke}</h3>
+        
+         
+           <button className='getJokeBtn' onClick={state.getData}>Get Random Joke</button>
+       
+     </div>
     )
  }
 
- export default JokeForm;
+ const mapStateToProps = state => {
+    return{
+        isGettingData: state.isGettingData,
+        joke: state.jokes,
+        error: state.error
+    }
+ }
+
+ export default connect(mapStateToProps, {getData} ) (JokeForm);

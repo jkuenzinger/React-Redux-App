@@ -36,3 +36,28 @@
     transform: rotate(360deg);
   }
 }
+
+.getJokeBtn{
+  display:flex;
+  justify-content:center;
+  background-color:red;
+ 
+}
+.chuckTitle{
+  background-color:grey;
+}
+.chuckTitle2{
+  background-color:blue;
+}
+.actualJoke{
+  background-color:green;
+}
+.mainContainer{
+  display:flex;
+  justify-content:center;
+
+
+ }
+.buttonContainer{
+  display:flex
+}
